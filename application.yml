@@ -6,7 +6,7 @@ server:
   port: 8001
 spring:
   application:
-    name: PLAT-SERVICE
+    name: YUNGOU-PROVIDER
   profiles: dev
 eureka:
   client:
@@ -17,7 +17,7 @@ server:
   port: 8002
 spring:
   application:
-    name: PLAT-SERVICE-TEST
+    name: YUNGOU-PROVIDER-TEST
   profiles: test
 eureka:
   client:
