@@ -22,3 +22,24 @@ zuul:
     getpro.path: /getpro/**
   ignored-services: "*"
   prefix: "/yungou"
+
+---
+server:
+  port: 9528
+spring:
+  application:
+    name: MICROSERVICE-ZUUL-GATEWAY-TEST
+  profiles: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+  instance:
+    instance-id: gateway-9528.com
+    prefer-ip-address: true
+zuul:
+  prefix: "/yungou"
+  ignored-services: "*"
+  routes:
+    getpro.serviceId: yungou-provider
+    getpro.path: /getpro/**
