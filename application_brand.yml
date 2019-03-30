@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8002
+spring:
+  application:
+    name: YUNGOU-BRAND
+  profiles: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+---
+server:
+  port: 8003
+spring:
+  application:
+    name: YUNGOU-BRAND-TEST
+  profiles: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
